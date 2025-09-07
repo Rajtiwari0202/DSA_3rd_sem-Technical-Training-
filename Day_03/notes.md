@@ -124,3 +124,44 @@ Time Complexity: O(n)
 Space Complexity: O(n)
 
 Notes: Each number is part of at most one sequence expansion, so this approach is linear and optimal.
+
+Hashing
+
+Definition:
+Hashing is a technique to map data of arbitrary size to fixed-size values (hashes) using a hash function. These hashes are used to store and retrieve data efficiently.
+
+Key Points:
+
+Provides O(1) average time for search, insert, and delete.
+
+Common data structures:
+
+unordered_map / unordered_set in C++
+
+Hash tables in general
+
+Collisions: Occur when two keys map to the same hash; handled by chaining or open addressing.
+
+Applications in DSA problems:
+
+Counting frequency of elements (Majority Element, Contains Duplicate)
+
+Grouping items by key (Group Anagrams)
+
+Checking existence quickly (Longest Consecutive Sequence)
+
+Example Use Cases from Day3 Problems:
+
+Majority Element: Use unordered_map to count occurrences in O(n)
+
+Group Anagrams: Use sorted string or frequency array as hash key
+
+Longest Consecutive Sequence: Store numbers in unordered_set to check presence in O(1)
+
+Notes / Tips:
+
+Hashing reduces nested loops to single-pass solutions.
+
+Always check for collisions when designing custom hash functions.
+
+Perfect for problems where lookup speed matters more than ordering.
