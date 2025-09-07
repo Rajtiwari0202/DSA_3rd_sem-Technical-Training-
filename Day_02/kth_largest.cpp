@@ -51,7 +51,6 @@ int kthLargestQuickselect(vector<int> nums, int k) {
     return quickselect(nums, 0, nums.size()-1, k-1);
 }
 
-// Driver Code
 int main() {
     vector<int> nums = {3,2,1,5,6,4};
     int k = 2;

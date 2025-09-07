@@ -47,7 +47,6 @@ bool containsDuplicateLength(vector<int>& nums) {
     return unique.size() < nums.size();
 }
 
-// Driver Code
 int main() {
     vector<int> nums1 = {1, 2, 3, 4};      // No duplicates
     vector<int> nums2 = {1, 2, 3, 1};      // Has duplicates

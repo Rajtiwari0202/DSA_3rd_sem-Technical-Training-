@@ -75,3 +75,52 @@ Faster than sorting for long strings.
 Time: O(n * k)
 
 Space: O(nk)
+
+Longest Consecutive Sequence
+
+Problem:
+Given an unsorted array nums, find the length of the longest consecutive sequence.
+
+Approaches
+
+1. Brute Force (Simple, Slow)
+
+Idea: For every number, try to build a consecutive sequence starting from it: check num+1, num+2, … until the sequence breaks.
+
+Time Complexity: O(n²)
+
+Space Complexity: O(1)
+
+Notes: Simple to implement but very slow for large arrays.
+
+2. Sort then Scan (Better than Brute Force)
+
+Idea:
+
+Sort the array.
+
+Walk through the sorted list and count runs of consecutive numbers.
+
+Skip duplicates — they don’t break a run but shouldn’t be counted twice.
+
+Time Complexity: O(n log n)
+
+Space Complexity: O(1) (if in-place sort)
+
+Notes: Easy and much faster than brute force, but not linear.
+
+3. HashSet / O(n) Solution (Recommended)
+
+Idea:
+
+Put all numbers into a hash set for O(1) lookup.
+
+Only start building a sequence if the current number is the start of a sequence (num-1 not in set).
+
+Count consecutive numbers (num+1, num+2, …) until the sequence ends.
+
+Time Complexity: O(n)
+
+Space Complexity: O(n)
+
+Notes: Each number is part of at most one sequence expansion, so this approach is linear and optimal.
